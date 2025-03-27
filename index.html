@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Portfolio - Vanaja Nannepaga</title>
+
+    <!-- bootstrap css cdn link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap icon cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+
+    <!-- for adding animation to website we have use AOS library 
+    AOS Library css file cdn link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- jquery cdn link  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- navbar starts -->
+    <nav
+      id="navbar-top"
+      class="navbar navbar-expand-lg navbar-light bg-white sticky-top"
+    >
+      <div class="container-fluid px-5">
+        <a class="navbar-brand fw-bold fs-2" href="#" style="color: #3f396d"
+          >Portfolio- Vanaja Nannepaga</a
+        >
+        <button
+          class="nav-menu d-md-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <i class="bi bi-menu-button-fill"></i>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav gap-4" style="font-size: 1.1rem">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#aboutme">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#achievements">Achievement</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            
+          </ul>
+        </div>
+        <button class="c-btn ms-4 py-2 px-4 rounded-pill d-none d-md-block" onclick="downloadResume()">
+          Download Resume
+        </button>
+        
+        <script>
+        function downloadResume() {
+          // Modified Google Drive link for direct download
+          const driveLink = 'https://drive.google.com/uc?export=download&id=1UYVf4gIuWBCTGr_wzfeB9XiXXBQV8x1R';
+          
+          // Create a temporary link
+          const link = document.createElement('a');
+          link.href = driveLink;
+          link.target = '_blank'; // Open in new tab if download doesn't start
+          link.download = 'Vanaja_Nannepaga_Resume.pdf'; // Suggested filename
+          
+          // For better compatibility
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          
+          // Fallback after short delay
+          setTimeout(() => {
+            window.open(driveLink, '_blank');
+          }, 500);
+        }
+        </script>
+
+      </div>
+    </nav>
+    <!-- navbar ends here -->
+
+    <!-- home section starts  -->
+    <section class="home pt-5 pb-5" id="home">
+      <div class="row justify-content-evenly align-items-center">
+        <!-- Image column - now on left side -->
+        <div class="col-10 col-md-4 order-md-1 order-2">
+          <img src="images/vanaja.jpeg" class="img-fluid" style="border-radius: 30px;" alt="Vanaja Nannepaga"/>
+        </div>
+        
+        <!-- Text column - now on right side -->
+        <div class="col-10 col-md-6 order-md-2 order-1 text-center text-md-start" data-aos="slide-left">
+          
+          <p class="text-muted">
+            Hello! I'm Vanaja Nannepaga, a passionate and solution-driven software developer. What excites me most about technology is its power to transform complex challenges into elegant solutions. I thrive in environments that demand both technical rigor and creative thinking.
+    
+            Whether working independently or collaborating in teams, I bring focused energy, attention to detail, and a commitment to delivering quality results.
+            
+            Beyond technical abilities, I pride myself on being an adaptable learner who can quickly grasp new concepts and technologies. I'm eager to contribute my problem-solving skills and fresh perspective to innovative projects.
+          </p>
+          
+          <div class="social-icons">
+            <div class="social-icon github" onclick="window.open('https://github.com/Vanaja-Nannepaga', '_blank')">
+              <i class="bi bi-github"></i>
+            </div>
+            <div class="social-icon linkedin" onclick="window.open('https://www.linkedin.com/in/vanaja-nannepaga-45a197263/', '_blank')">
+              <i class="bi bi-linkedin"></i>
+            </div>
+            <div class="social-icon email" onclick="window.location.href='mailto:vanaja.nannepaga2002@gmail.com'">
+              <i class="bi bi-envelope-fill"></i>
+            </div>
+            <div class="social-icon whatsapp" onclick="window.open('https://wa.me/919876543210', '_blank')">
+              <i class="bi bi-whatsapp"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <h2 style="color: #3f396d; margin: 0; padding: 0;">
+      Hello! I Am <br />
+      <div id="name" style="color: #6f34fe; font-size: 3.5rem; font-weight: 700; display: inline; line-height: 1.2; font-family: 'Josefin Sans', sans-serif;">Vanaja Nannepaga</div>
+    </h2>
+
+    <style>
+      .social-icons {
+        position: relative;
+        display: flex;
+        gap: 15px;
+      }
+      
+      .social-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+      
+      .social-icon:hover {
+        transform: scale(1.2);
+      }
+      
+      .social-icon i {
+        font-size: 24px;
+        color: white;
+      }
+      
+      .linkedin { background: #0077b5; }
+      .github { background: #333; }
+      .email { background: #d44638; }
+      .whatsapp { background: #25D366; }
+    
+      /* Responsive adjustments */
+      @media (max-width: 767.98px) {
+        .order-md-1.order-2 {
+          order: 2 !important;
+        }
+        .order-md-2.order-1 {
+          order: 1 !important;
+        }
+      }
+    </style>
+    <!-- home section ends here -->
+
+
+
+
+    <!-- About Me Section Starts -->
+<section class="full-height px-lg-5" id="aboutme">
+  <style>
+      body {
+          background-color:#f7efe4;
+          color: #eb6d6d;
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+      }
+      .container {
+          padding: 50px;
+      }
+      h2 {
+          font-size: 36px;
+          font-weight: bold;
+          opacity: 0;
+          transition: opacity 1s ease-out;
+      }
+      .education-card {
+          background-color: #b3b6e0;
+          padding: 20px;
+          border-radius: 10px;
+          margin: 20px 0;
+          display: flex;
+          align-items: center;
+          transform: translateY(50px);
+          opacity: 0;
+          transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+      }
+      .education-card:hover {
+          box-shadow: 0px 0px 15px 5px rgba(216, 154, 135, 0.8);
+          cursor: pointer;
+      }
+      .icon {
+          width: 40px;
+          height: 40px;
+          background-color: #d48b74;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #1e1e1e;
+          font-weight: bold;
+          margin-right: 15px;
+      }
+      .education-content {
+          color: black;
+      }
+      .education-content h3 {
+          margin: 0;
+          font-size: 20px;
+          font-weight: bold;
+      }
+      .education-content p {
+          margin: 5px 0 0;
+          font-size: 16px;
+          color: rgb(235, 222, 222);
+      }
+
+      /* Animation Trigger Class */
+      .show {
+          transform: translateY(0);
+          opacity: 1;
+      }
+  </style>
+
+  <body>
+      <div class="container">
+          <h2 id="education-title">Education</h2>
+          
+          <div class="education-card">
+              <div class="icon">🎓</div>
+              <div class="education-content">
+                  <h5>2022-2026</h5>
+                  <h3>Andhra Pradesh Board of Secondary Education</h3>
+                  <p>Mont Fort High School</p>
+              </div>
+          </div>
+          <div class="education-card">
+            <div class="icon">🎓</div>
+            <div class="education-content">
+                <h5>2019-2021</h5>
+                <h3>Andhra Pradesh Board of Intermediate Education</h3>
+                <p>Narayana Junior College</p>
+            </div>
+        </div>
+          <div class="education-card">
+              <div class="icon">🎓</div>
+              <div class="education-content">
+                  <h5>2022-2026</h5>
+                  <h3>Bachelor of Technology</h3>
+                  <p>Indian Institute of Technology Bhilai</p>
+              </div>
+          </div>
+      </div>
+
+      <script>
+          function observeEducationSection() {
+              const observer = new IntersectionObserver(
+                  (entries) => {
+                      entries.forEach((entry) => {
+                          if (entry.isIntersecting) {
+                              entry.target.classList.add("show");
+                          } else {
+                              // Reset animation when section is out of view
+                              entry.target.classList.remove("show");
+                          }
+                      });
+                  },
+                  { threshold: 0.3 } // Trigger when 30% of the section is visible
+              );
+
+              document.querySelectorAll(".education-card").forEach((card) => {
+                  observer.observe(card);
+              });
+
+              const title = document.getElementById("education-title");
+              const titleObserver = new IntersectionObserver((entries) => {
+                  entries.forEach((entry) => {
+                      if (entry.isIntersecting) {
+                          title.style.opacity = "1";
+                      } else {
+                          title.style.opacity = "0"; // Reset opacity when not visible
+                      }
+                  });
+              });
+
+              titleObserver.observe(title);
+          }
+
+          // Call function to observe elements on page load and every time it's visited
+          document.addEventListener("DOMContentLoaded", observeEducationSection);
+          document.addEventListener("visibilitychange", () => {
+              if (document.visibilityState === "visible") {
+                  observeEducationSection();
+              }
+          });
+      </script>
+  </body>
+</section>
+<!-- About Me Section Ends Here -->
+
+
+
+
+
+
+
+
+ <!-- skill section starts -->
+<section class="skill mt-5 py-5" id="skills">
+  <div class="row justify-content-evenly">
+    <div class="col-10 col-md-5 skill-with-progress" data-aos="slide-right">
+      <div class="row justify-content-evenly">
+        <!-- Box 1 - Frontend Technologies -->
+        <div class="col-10 col-md-6 mb-4">
+          <div class="skill-card h-100 text-center p-4">
+            <h5 class="skill-title mb-3">Frontend Technologies</h5>
+            <div class="skill-icon mb-3">
+              <i class="fab fa-html5 fa-2x mx-1" style="color: #e34f26;"></i>
+              <i class="fab fa-css3-alt fa-2x mx-1" style="color: #2965f1;"></i>
+              <i class="fab fa-js-square fa-2x mx-1" style="color: #f7df1e;"></i>
+              <i class="fab fa-react fa-2x mx-1" style="color: #61dafb;"></i>
+              <i class="fab fa-angular fa-2x mx-1" style="color: #dd0031;"></i>
+              <i class="fab fa-bootstrap fa-2x mx-1" style="color: #7952b3;"></i>
+            </div>
+            <div class="skill-list">
+              <span class="badge bg-light text-dark m-1">HTML5</span>
+              <span class="badge bg-light text-dark m-1">CSS3</span>
+              <span class="badge bg-light text-dark m-1">JavaScript</span>
+              <span class="badge bg-light text-dark m-1">React.js</span>
+              <span class="badge bg-light text-dark m-1">Angular</span>
+              <span class="badge bg-light text-dark m-1">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Box 2 - Backend & Scripting -->
+        <div class="col-10 col-md-6 mb-4">
+          <div class="skill-card h-100 text-center p-4">
+            <h5 class="skill-title mb-3">Backend & Scripting</h5>
+            <div class="skill-icon mb-3">
+              <i class="fab fa-python fa-2x mx-1" style="color: #3776ab;"></i>
+              <i class="fas fa-terminal fa-2x mx-1" style="color: #89e051;"></i>
+              <i class="fab fa-php fa-2x mx-1" style="color: #777bb3;"></i>
+              <i class="fab fa-node-js fa-2x mx-1" style="color: #68a063;"></i>
+              <i class="fas fa-server fa-2x mx-1" style="color: #3c873a;"></i>
+            </div>
+            <div class="skill-list">
+              <span class="badge bg-light text-dark m-1">Python</span>
+              <span class="badge bg-light text-dark m-1">Shell Scripting</span>
+              <span class="badge bg-light text-dark m-1">PHP</span>
+              <span class="badge bg-light text-dark m-1">Node.js</span>
+              <span class="badge bg-light text-dark m-1">Express.js</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row justify-content-evenly">
+        <!-- Box 3 - Databases & Languages -->
+        <div class="col-10 col-md-6 mb-4">
+          <div class="skill-card h-100 text-center p-4">
+            <h5 class="skill-title mb-3">Databases & Languages</h5>
+            <div class="skill-icon mb-3">
+              <i class="fas fa-database fa-2x mx-1" style="color: #589636;"></i>
+              <i class="fas fa-table fa-2x mx-1" style="color: #00758f;"></i>
+              <i class="fas fa-file-code fa-2x mx-1" style="color: #004482;"></i>
+              <i class="fas fa-plus-square fa-2x mx-1" style="color: #659ad2;"></i>
+            </div>
+            <div class="skill-list">
+              <span class="badge bg-light text-dark m-1">MongoDB</span>
+              <span class="badge bg-light text-dark m-1">SQL</span>
+              <span class="badge bg-light text-dark m-1">C</span>
+              <span class="badge bg-light text-dark m-1">C++</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Box 4 - DevOps & Tools -->
+        <div class="col-10 col-md-6 mb-4">
+          <div class="skill-card h-100 text-center p-4">
+            <h5 class="skill-title mb-3">DevOps & Tools</h5>
+            <div class="skill-icon mb-3">
+              <i class="fab fa-git-alt fa-2x mx-1" style="color: #f05032;"></i>
+              <i class="fab fa-github fa-2x mx-1" style="color: #181717;"></i>
+              <i class="fab fa-docker fa-2x mx-1" style="color: #2496ed;"></i>
+            </div>
+            <div class="skill-list">
+              <span class="badge bg-light text-dark m-1">Git</span>
+              <span class="badge bg-light text-dark m-1">GitHub</span>
+              <span class="badge bg-light text-dark m-1">Docker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-10 col-md-5 skill-detail" data-aos="slide-left">
+      <div class="heading mt-5 mt-md-3">
+        <small class="text-uppercase fw-bold text-primary">My Skills</small>
+        <h3 class="fw-bold mt-2">Comprehensive Technical Expertise</h3>
+        <p class="text-muted mt-3">
+          With a diverse skill set spanning frontend and backend development, database management, and DevOps tools, I create robust and scalable digital solutions. My expertise covers the full development stack from user interfaces to server infrastructure.
+        </p>
+        <p class="text-muted">
+          I continuously expand my technical knowledge to stay current with industry trends and emerging technologies, ensuring I can deliver modern, efficient solutions to complex problems.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- skill section end here -->
+
+<style>
+  .skill-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .skill-title {
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+  
+  .skill-icon i {
+    transition: transform 0.3s ease;
+    margin: 0 8px;
+  }
+  
+  .skill-icon i:hover {
+    transform: scale(1.2);
+  }
+  
+  .badge {
+    font-weight: 500;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+  
+  .skill-list {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+</style>
+
+
+
+    
+
+    
+
+    <!-- portfolio section starts here -->
+    <section class="projects" id="projects">
+      <div class="heading text-center pt-5">
+        <small>Creative Work</small>
+        <h3>Check My Projects</h3>
+      </div>
+
+      <div id="myBtnContainer" class="text-center mt-4">
+        <!-- here we will create custom attribute using data- for filtering -->
+        <button class="filter-item" data-filter="all">All</button>
+        <button class="filter-item" data-filter="game"> Handwritten Digit recognition using robustness</button>
+        <button class="filter-item" data-filter="webapp">AR Home Decor</button>
+       
+      </div>
+      <div class="portfolio-body">
+        <div class="row justify-content-evenly px-4">
+          <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <a href="https://github.com/Vanaja-Nannepaga/Handwritten-digit-recognition " target="_blank"> 
+              <img src="images/Digit_Recognition_.png" class="card-img-top" alt="Handwritten Digit Recognition" />
+            </a>
+              <div class="card-body text-center">
+                <h4 class="card-title">A smart model that recognizes handwritten numbers while resisting tricky attacks!</h4>
+                <span class="badge bg-secondary badge-pill">Python</span>
+                <span class="badge bg-secondary badge-pill">Jupyter Notebook</span>
+                
+                <br />
+                
+              </div>
+            </div>
+          </div>
+         
+          <div class="post col-md-4 webapp all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <a href="https://github.com/Vanaja-Nannepaga/AR-View " target="_blank"> 
+              <img src="images/Ar-view.jpg" class="card-img-top" alt="Augmented Reality View " />
+              </a>
+              <div class="card-body text-center">
+                <h4 class="card-title">Designed to add digital elements over real-world views with limited interaction</h4>
+                <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+                <span class="badge bg-secondary badge-pill">JavaScript</span>
+                
+                <br />
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+          
+    </section>
+    <!-- portfolio section ends here -->
+
+
+
+    <!-- blog section starts -->
+    <section class="blog mt-5 pb-5" id="achievements">
+      <div class="heading text-center pt-5">
+        
+        <h3>Achievements</h3>
+      </div>
+      <div class="row justify-content-evenly px-4 mt-4" data-aos="fade-up">
+        <div class="blogpost col-md-4 col-10 mt-2 mt-md-0 game all">
+          <div class="card">
+            <img
+              src="images/Myntra-hackerramp.png"
+              class="card-img-top rounded-4"
+              alt="..."
+            />
+            <div class="card-body px-4">
+              <small>By Myntra Designs Pvt.Ltd</small
+              ><span class="ms-3">2024</span>
+              <h4 class="card-title">
+                <a href="">Myntra-HackerRamp:WeForShe</a>
+              </h4>
+              <p class="text-muted">
+                Participated in Myntra’s Hacker Ramp 2024 and advanced to 2 phases
+              </p>
+              
+              <a href="https://unstop.com/certificate-preview/08e958bc-fab9-4d95-bdbc-afc34ad202c4" data-bs-target="_blank">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="blogpost col-md-4 col-10 mt-5 mt-md-0 website all">
+          <div class="card">
+            <img
+              src="images/flipkart_grid.png"
+              class="card-img-top rounded-4"
+              alt="..."
+            />
+            <div class="card-body px-4">
+              <small>By the Flipkart</small
+              ><span class="ms-3">2024</span>
+              <h4 class="card-title">
+                <a href="">Flipkart GRiD 6.0 - Software Development Track</a>
+              </h4>
+              <p class="text-muted">
+                participated in the Level 1: E-Commerce & Tech Quiz of the
+Flipkart GRiD 
+              </p>
+              <a href="https://unstop.com/certificate-preview/a5fbeb35-a1cf-4b9a-882b-7db39f0a9865"  data-bs-target="_blank">Read More</a>
+            </div>
+          </div>
+        </div>
+        
+       
+    </section>
+    <!-- blog section ends here -->
+
+    <!-- contact section starts -->
+    <section class="contact py-5" id="contact">
+      <div class="heading text-center">
+        <small>Get in Touch</small>
+        <h3>Any Questions? Feel Free to Contact</h3>
+      </div>
+      <div class="container mt-5">
+        <div class="row justify-content-evenly">
+            <div class="col-md-5 col-10 contact-details" data-aos="slide-right">
+                <div class="row justify-content-evenly">
+                    <div class="col-1">
+                        <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                    <div class="col-11">
+                        <p>IIT Bhilai, Durg, Chhattisgarh</p>
+                    </div>
+                </div>
+                <div class="row justify-content-evenly">
+                    <div class="col-1">
+                        <i class="bi bi-telephone-fill"></i>
+                    </div>
+                    <div class="col-11">
+                        <p>+91 90xxxxxxxx</p>
+                    </div>
+                </div>
+                <div class="row justify-content-evenly">
+                    <div class="col-1">
+                        <i class="bi bi-envelope-fill"></i>
+                    </div>
+                    <div class="col-11">
+                        <p>vanaja.nannepaga2002@gmail.com</p>
+                    </div>
+                </div>
+                <div class="row justify-content-evenly">
+                    <div class="col-1">
+                        <i class="bi bi-linkedin"></i>
+                    </div>
+                    <div class="col-11">
+                      <p><a href="https://www.linkedin.com/in/vanaja-nannepaga-45a197263/" 
+                            target="_blank" 
+                            style="color: inherit; text-decoration: none;">LinkedIn Profile</a></p>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-5 col-10 mt-3 mt-md-0 contact-form" data-aos="slide-left">
+                <div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Name" />
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="E-mail" />
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Mobile No." />
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" placeholder="Message" rows="5"></textarea>
+                    </div>
+                    <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">Submit</button>
+                    <div id="form-message" class="mt-3" style="display: none;">
+                      <div class="alert alert-success">
+                        Thank you for your message! I'll get back to you soon.
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+         
+
+    </section>
+    <!-- contact section ends here -->
+
+      <!-- now we will make back to top button when user click on it it will be redirected to top page  -->
+    <button
+      type="button"
+      class="btn btn-floating btn-lg rounded-pill"
+      id="btn-back-to-top"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- footer section starts  -->
+    <footer class="text-center text-muted py-4">
+      <h3 class="text-white pt-4" data-aos="fade-up">Portfolio</h3>
+      <div class="link-group mt-5" data-aos="fade-up">
+        <a href="#home">Home</a>
+        <div class="vr"></div>
+        <a href="#about">About</a>
+        <div class="vr"></div>
+        <a href="#service">Service</a>
+        <div class="vr"></div>
+        <a href="#portfolio">Portfolio</a>
+        <div class="vr"></div>
+        <a href="#blog">Blog</a>
+        <div class="vr"></div>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="social-links mt-5" data-aos="fade-up">
+        <button href="" class="rounded-pill dribble">
+          <i class="bi bi-dribbble"></i>
+        </button>
+        <button href="" class="rounded-pill whatsapp">
+          <i class="bi bi-whatsapp"></i>
+        </button>
+        <button href="" class="rounded-pill behance">
+          <i class="bi bi-behance"></i>
+        </button>
+      </div>
+      <hr class="text-muted my-4" />
+
+      <p>Copyright 2025 Portfolio | All Rights Reserved.</p>
+    </footer>
+    <!-- footer section ends here -->
+
+      <!-- bootstrap javascript cdn link  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS library javascript link  -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      // initializing AOS library
+      AOS.init({
+        duration: 1000,
+        offset: 50,
+      });
+    </script>
+    <!-- custom js file linking -->
+    <script src="js/script.js"></script>
+      
+
+    <!-- Chatbot Widget -->
+<div id="chatbot-container">
+  <div id="chatbot-button" onclick="toggleChatbot()">
+    <i class="fas fa-comment-dots"></i>
+  </div>
+  <div id="chatbot-window">
+    <div id="chatbot-header">
+      <h5>Vanaja's Portfolio Assistant</h5>
+      <button onclick="toggleChatbot()" id="close-chatbot">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div id="chatbot-messages">
+      <div class="chatbot-message chatbot-response">
+        <div class="message-content">
+          Hello! I'm here to help you learn more about Vanaja. Ask me anything about her skills, projects, or education!
+        </div>
+      </div>
+    </div>
+    <div id="chatbot-input">
+      <input type="text" id="chatbot-query" placeholder="Type your question here..." onkeypress="handleChatbotKeyPress(event)">
+      <button id="chatbot-send" onclick="processChatbotQuery()">
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Chatbot Styles */
+  #chatbot-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  #chatbot-button {
+    width: 60px;
+    height: 60px;
+    background-color: #3f396d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+  
+  #chatbot-button:hover {
+    background-color: #ff7b00;
+    transform: scale(1.1);
+  }
+  
+  #chatbot-window {
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  #chatbot-header {
+    background-color: #3f396d;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #chatbot-header h5 {
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  #close-chatbot {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  #chatbot-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+  }
+  
+  .chatbot-message {
+    margin-bottom: 15px;
+    display: flex;
+  }
+  
+  .chatbot-query {
+    justify-content: flex-end;
+  }
+  
+  .chatbot-response {
+    justify-content: flex-start;
+  }
+  
+  .message-content {
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 18px;
+    line-height: 1.4;
+  }
+  
+  .chatbot-query .message-content {
+    background-color: #3f396d;
+    color: white;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .chatbot-response .message-content {
+    background-color: white;
+    color: #333;
+    border: 1px solid #ddd;
+    border-bottom-left-radius: 5px;
+  }
+  
+  #chatbot-input {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    background-color: white;
+  }
+  
+  #chatbot-query {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    outline: none;
+  }
+  
+  #chatbot-send {
+    background-color: #3f396d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #chatbot-send:hover {
+    background-color: #ff7b00;
+  }
+  
+  .typing-indicator {
+    display: flex;
+    padding: 10px 15px;
+  }
+  
+  .typing-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #999;
+    border-radius: 50%;
+    margin: 0 3px;
+    animation: typingAnimation 1.4s infinite ease-in-out;
+  }
+  
+  .typing-dot:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .typing-dot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .typing-dot:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes typingAnimation {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-5px); }
+  }
+</style>
+
+<script>
+  // Chatbot functionality
+  const chatbotData = {
+    "greetings": [
+      "Hello! I'm happy to tell you about Vanaja Nannepaga. What would you like to know?",
+      "Hi there! I can share information about Vanaja's skills, projects, and background. How can I help?",
+      "Greetings! Ask me anything about Vanaja Nannepaga, a talented software developer."
+    ],
+    "about": [
+      "Vanaja Nannepaga is a driven and detail-oriented software developer currently pursuing her Bachelor of Technology at IIT Bhilai (2022-2026). She has a strong foundation in data structures, algorithms, and system design with expertise in both frontend and backend technologies.",
+      "Vanaja is a passionate developer with skills in Python, JavaScript, React, Node.js, and more. She's worked on projects like Handwritten Digit Recognition and AR Home Decor, and has participated in hackathons like Myntra HackerRamp and Flipkart GRiD.",
+      "Vanaja Nannepaga is a tech enthusiast with comprehensive skills across the full stack development spectrum. She's particularly interested in data-driven applications and DevOps practices, and is always eager to learn new technologies."
+    ],
+    "skills": {
+      "frontend": "Vanaja is skilled in frontend technologies including HTML5, CSS3, JavaScript, React.js, Angular, and Bootstrap.",
+      "backend": "Her backend and scripting skills include Python, Shell Scripting, PHP, Node.js, and Express.js.",
+      "database": "She has experience with databases and languages like MongoDB, SQL, C, and C++.",
+      "devops": "For DevOps and tools, Vanaja is proficient with Git, GitHub, and Docker.",
+      "all": "Vanaja has comprehensive technical expertise covering frontend (HTML, CSS, JavaScript, React, Angular, Bootstrap), backend (Python, PHP, Node.js), databases (MongoDB, SQL), languages (C, C++), and DevOps tools (Git, Docker)."
+    },
+    "projects": {
+      "digit": "Vanaja worked on a Handwritten Digit Recognition project that creates a smart model recognizing handwritten numbers while resisting tricky attacks. It uses Python and Jupyter Notebook.",
+      "ar": "The AR Home Decor project adds digital elements over real-world views with limited interaction. It was built with HTML, CSS, and JavaScript.",
+      "all": "Vanaja has worked on several projects including:<br><br>1. <b>Handwritten Digit Recognition</b>: A Python-based model that recognizes handwritten numbers (GitHub: <a href='https://github.com/Vanaja-Nannepaga/Handwritten-digit-recognition' target='_blank'>View Project</a>)<br>2. <b>AR Home Decor</b>: An augmented reality view project using HTML/CSS/JS (GitHub: <a href='https://github.com/Vanaja-Nannepaga/AR-View' target='_blank'>View Project</a>)"
+    },
+    "education": {
+      "school": "Vanaja attended Mont Fort High School under the Andhra Pradesh Board of Secondary Education (2019-2021).",
+      "college": "She studied at Narayana Junior College under the Andhra Pradesh Board of Intermediate Education (2019-2021).",
+      "university": "Vanaja is currently pursuing her Bachelor of Technology at the Indian Institute of Technology Bhilai (2022-2026).",
+      "all": "Vanaja's education includes:<br><br>- Mont Fort High School (Andhra Pradesh Board, 2019-2021)<br>- Narayana Junior College (Andhra Pradesh Board, 2019-2021)<br>- Bachelor of Technology at IIT Bhilai (2022-2026)"
+    },
+    "achievements": {
+      "myntra": "Vanaja participated in Myntra's Hacker Ramp 2024 and advanced to 2 phases. <a href='https://unstop.com/certificate-preview/08e958bc-fab9-4d95-bdbc-afc34ad202c4' target='_blank'>View Certificate</a>",
+      "flipkart": "She participated in the Level 1: E-Commerce & Tech Quiz of the Flipkart GRiD 6.0. <a href='https://unstop.com/certificate-preview/a5fbeb35-a1cf-4b9a-882b-7db39f0a9865' target='_blank'>View Certificate</a>",
+      "all": "Vanaja's achievements include:<br><br>- Myntra HackerRamp: WeForShe (2024)<br>- Flipkart GRiD 6.0 - Software Development Track (2024)"
+    },
+    "contact": "You can contact Vanaja through:<br><br>- Email: vanaja.nannepaga2002@gmail.com<br>- LinkedIn: <a href='https://www.linkedin.com/in/vanaja-nannepaga-45a197263/' target='_blank'>Vanaja Nannepaga</a><br>- GitHub: <a href='https://github.com/Vanaja-Nannepaga' target='_blank'>Vanaja-Nannepaga</a>",
+    "default": "I'm not sure I understand. Could you try asking about Vanaja's skills, projects, education, or achievements? Here are some examples:<br><br>- What skills does Vanaja have?<br>- Tell me about her projects<br>- Where did she study?<br>- What are her achievements?"
+  };
+
+  function toggleChatbot() {
+    const chatbotWindow = document.getElementById('chatbot-window');
+    const chatbotButton = document.getElementById('chatbot-button');
+    
+    if (chatbotWindow.style.display === 'flex') {
+      chatbotWindow.style.display = 'none';
+      chatbotButton.style.display = 'flex';
+    } else {
+      chatbotWindow.style.display = 'flex';
+      chatbotButton.style.display = 'none';
+    }
+  }
+
+  function handleChatbotKeyPress(event) {
+    if (event.key === 'Enter') {
+      processChatbotQuery();
+    }
+  }
+
+  function processChatbotQuery() {
+    const input = document.getElementById('chatbot-query');
+    const query = input.value.trim().toLowerCase();
+    input.value = '';
+    
+    if (!query) return;
+    
+    addMessage(query, 'query');
+    showTypingIndicator();
+    
+    // Simulate processing delay
+    setTimeout(() => {
+      removeTypingIndicator();
+      const response = generateResponse(query);
+      addMessage(response, 'response');
+    }, 1000);
+  }
+
+  function addMessage(content, type) {
+    const messagesContainer = document.getElementById('chatbot-messages');
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `chatbot-message chatbot-${type}`;
+    
+    const contentDiv = document.createElement('div');
+    contentDiv.className = 'message-content';
+    contentDiv.innerHTML = content;
+    
+    messageDiv.appendChild(contentDiv);
+    messagesContainer.appendChild(messageDiv);
+    
+    // Scroll to bottom
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }
+
+  function showTypingIndicator() {
+    const messagesContainer = document.getElementById('chatbot-messages');
+    const typingDiv = document.createElement('div');
+    typingDiv.className = 'chatbot-message chatbot-response typing-indicator';
+    typingDiv.id = 'typing-indicator';
+    
+    for (let i = 0; i < 3; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'typing-dot';
+      typingDiv.appendChild(dot);
+    }
+    
+    messagesContainer.appendChild(typingDiv);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }
+
+  function removeTypingIndicator() {
+    const typingIndicator = document.getElementById('typing-indicator');
+    if (typingIndicator) {
+      typingIndicator.remove();
+    }
+  }
+
+  function generateResponse(query) {
+    // Check for greetings
+    if (query.match(/hello|hi|hey|greetings/i)) {
+      const greetings = chatbotData.greetings;
+      return greetings[Math.floor(Math.random() * greetings.length)];
+    }
+    
+    // Check for skills questions
+    if (query.match(/skill|tech|technology|what can you do|expertise/i)) {
+      if (query.match(/frontend|front end|html|css|javascript|react|angular|bootstrap/i)) {
+        return chatbotData.skills.frontend;
+      }
+      if (query.match(/backend|back end|python|php|node|express|scripting/i)) {
+        return chatbotData.skills.backend;
+      }
+      if (query.match(/database|sql|mongo|c\+\+|c language/i)) {
+        return chatbotData.skills.database;
+      }
+      if (query.match(/devops|git|github|docker/i)) {
+        return chatbotData.skills.devops;
+      }
+      return chatbotData.skills.all;
+    }
+    
+    // Check for project questions
+    if (query.match(/project|work|what have you built|handwritten|digit|ar|augmented reality/i)) {
+      if (query.match(/handwritten|digit|number|recognition/i)) {
+        return chatbotData.projects.digit;
+      }
+      if (query.match(/ar|augmented|reality|home|decor/i)) {
+        return chatbotData.projects.ar;
+      }
+      return chatbotData.projects.all;
+    }
+    
+    // Check for education questions
+    if (query.match(/education|study|school|college|university|iit|degree/i)) {
+      if (query.match(/school|high school/i)) {
+        return chatbotData.education.school;
+      }
+      if (query.match(/college|junior/i)) {
+        return chatbotData.education.college;
+      }
+      if (query.match(/university|iit|bachelor|degree/i)) {
+        return chatbotData.education.university;
+      }
+      return chatbotData.education.all;
+    }
+    
+    // Check for achievement questions
+    if (query.match(/achievement|accomplishment|myntra|flipkart|hackerramp|grid/i)) {
+      if (query.match(/myntra|hackerramp/i)) {
+        return chatbotData.achievements.myntra;
+      }
+      if (query.match(/flipkart|grid/i)) {
+        return chatbotData.achievements.flipkart;
+      }
+      return chatbotData.achievements.all;
+    }
+    
+    // Check for contact questions
+    if (query.match(/contact|email|linkedin|github|how to reach|get in touch/i)) {
+      return chatbotData.contact;
+    }
+    
+    // Default response
+    return chatbotData.default;
+  }
+</script>
+
+
+
+
+
+
+  </body>
+</html>
