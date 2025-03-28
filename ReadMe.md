@@ -18,8 +18,12 @@ Vanaja's Portfolio/
 ## 🚀 Features
 - **Introduction Section** – Brief overview about me.
 - **Skills Section** – Highlights my expertise in Data and DevOps.
+-**Education Section** – Details about my academic background.
+
+-**Skills Section** – Highlights my expertise in Data and DevOps.
+
+-**Achievements Section** – Showcases my accomplishments.
 - **Projects Showcase** – Displays key projects like:
-  - **Geolocation-based Attendance Tracker** 📍
   - **Handwritten Digit Recognition using Adversarial Robustness** 🔢
   - **Augmented Reality Home Decor & Movie Costumes** 🎭
 - **Resume Download** – Users can download my resume with a single click.
@@ -27,7 +31,7 @@ Vanaja's Portfolio/
 - **Deployment on Vercel** – Hosted via **Vercel**.
 
 ## 🛠️ Technologies Used
-- **Frontend:** HTML, CSS, JavaScript, TypeScript (for specific features)
+- **Frontend:** HTML, CSS, JavaScript
 - **Chatbot:** Open-source LLM
 - **DevOps:** Git for version control, Vercel for hosting
 
