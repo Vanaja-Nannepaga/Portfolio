@@ -18,11 +18,11 @@ Vanaja's Portfolio/
 ## 🚀 Features
 - **Introduction Section** – Brief overview about me.
 - **Skills Section** – Highlights my expertise in Data and DevOps.
--**Education Section** – Details about my academic background.
+- **Education Section** – Details about my academic background.
 
--**Skills Section** – Highlights my expertise in Data and DevOps.
+- **Skills Section** – Highlights my expertise in Data and DevOps.
 
--**Achievements Section** – Showcases my accomplishments.
+- **Achievements Section** – Showcases my accomplishments.
 - **Projects Showcase** – Displays key projects like:
   - **Handwritten Digit Recognition using Adversarial Robustness** 🔢
   - **Augmented Reality Home Decor & Movie Costumes** 🎭
